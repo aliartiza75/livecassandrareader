@@ -2,6 +2,8 @@
 
 A script to read data from the Cassandra table in real time.
 
+# Problem
+
 The current version of the python-driver reads the data from the Cassandra table till a particular row but what if the table is updating in real-time, so in order to read the new data from a table we have to go through all the rows again.
 
 For example:
@@ -18,5 +20,4 @@ result_set = self.session.execute("SELECT * FROM testKeyspace.USER")
 ```
 we will be able to read the cassandra table till 100th. After some time the **USER** table gets updated with two new rows. So in order to read the two new rows we have to go through all the other 100 rows which is inefficient. 
 
-So In this PR, I will add a script, which will be able to read the data from the Cassandra in real time.   
 
