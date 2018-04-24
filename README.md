@@ -25,7 +25,7 @@ we will be able to read the cassandra table till 100th. After some time the **US
 
 It supports both python2 & 3 version.
 
-Intall the python cassandra driver using the command given below:
+Install the python cassandra driver using the command given below:
 
 ```
 $ pip install cassandra-driver
@@ -45,3 +45,7 @@ configurations = {
 }
 ```
 
+To run the script"
+```
+$ python livecassandrareader.py
+```
